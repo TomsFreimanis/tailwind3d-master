@@ -124,7 +124,7 @@ function App() {
                 href="#contact"
                 className="hover:text-teal-300 transition-colors duration-300"
               >
-                Contact
+                Contacts
               </a>
             </li>
           </ul>

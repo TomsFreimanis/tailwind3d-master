@@ -121,62 +121,57 @@ function Projects() {
   return (
     <section className="projects" id="projects">
       <div className="bg-black py-20">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="col-span-3 text-center mb-6">
-            <h1 className="text-center text-4xl md:text-6xl font-extrabold text-teal-400 shadow-2xl leading-tight p-8 md:p-12">
-              Projects
-            </h1>
-          </div>
-          {projects.slice(0, projectsToShow).map((project, index) => (
-            <div
-              className="bg-black rounded-lg overflow-hidden shadow-md border border-gray-600 transform hover:scale-105 transition duration-300"
-              key={index}
-            >
-              <img
-                src={project.imageSrc}
-                alt={project.title}
-                className="w-full h-64 object-cover"
-              />
-              <div className="spline-icon">
-                <a
-                  href={project.githubRepoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* <Spline scene="https://prod.spline.design/1U7lkFOXA6tBGEqT/scene.splinecode" /> */}
-                </a>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-4 text-white bg-gradient-to-r from-teal-400 to-teal-600 py-2 px-4 rounded">
-                  {project.title}
-                </h3>
-                <p className="text-gray-300 mb-4">{project.description}</p>
-                <div className="flex flex-wrap">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className={`text-black py-1 px-2 rounded-full text-sm font-semibold mr-2 mb-2 ${getTagColor(
-                        tag
-                      )}`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        <div className="container mx-auto">
+          <div className="md:grid md:grid-cols-3 md:gap-6">
+            <div className="col-span-3 text-center mb-6">
+              <h1 className="text-center text-4xl md:text-6xl font-extrabold text-teal-400 shadow-2xl leading-tight p-8 md:p-12">
+                Projects
+              </h1>
+            </div>
+            {projects.slice(0, projectsToShow).map((project, index) => (
+              <div
+                className="bg-black rounded-lg overflow-hidden shadow-md border border-gray-600 transform hover:scale-105 transition duration-300 mb-4"
+                key={index}
+              >
+                <img
+                  src={project.imageSrc}
+                  alt={project.title}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-lg md:text-2xl font-semibold mb-2 text-white bg-gradient-to-r from-teal-400 to-teal-600 py-1 px-2 rounded">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-gray-300 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap">
+                    {project.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className={`text-black py-1 px-2 rounded-full text-xs md:text-sm font-semibold mr-2 mb-2 ${getTagColor(
+                          tag
+                        )}`}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        {projectsToShow < projects.length && (
-          <div className="flex justify-center my-8">
-            <div className="w-12 h-12">
-              <Spline
-                scene="https://prod.spline.design/4KIwxMyoWkStvWcR/scene.splinecode"
-                onClick={loadMoreProjects}
-              />
-            </div>
+            ))}
           </div>
-        )}
+          {projectsToShow < projects.length && (
+            <div className="flex justify-center my-8">
+              <div className="w-12 h-12">
+                <Spline
+                  scene="https://prod.spline.design/4KIwxMyoWkStvWcR/scene.splinecode"
+                  onClick={loadMoreProjects}
+                />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

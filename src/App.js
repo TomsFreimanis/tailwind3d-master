@@ -14,7 +14,7 @@ function App() {
   // Function to update spline width based on screen width
   const updateSplineWidth = () => {
     if (window.innerWidth <= 768) {
-      setSplineWidth(256); // Adjust the width for mobile screens
+      setSplineWidth(window.innerWidth - 32); // Adjust the width for mobile screens
     } else {
       setSplineWidth(512); // Default width for larger screens
     }
@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div
-      className="w-screen h-screen flex flex-col justify-center items-center "
+      className="w-screen h-screen flex flex-col justify-center items-center"
       style={{
         // Set the background image
         backgroundImage: "url('/assets/38126.jpg')", // Replace with your image path
@@ -54,7 +54,7 @@ function App() {
     >
       {/* Navbar */}
       <nav
-        className={`w-screen  py-0 fixed top-0 z-10 ${
+        className={`w-screen py-3 fixed top-0 z-10 ${
           isScrolled ? "bg-teal-950" : ""
         }`}
       >
@@ -132,11 +132,7 @@ function App() {
       </nav>
 
       {/* Content */}
-      <div
-        className={`container mx-auto text-center mt-8 md:mt-20 ${
-          isMobileMenuOpen ? "hidden" : ""
-        }`}
-      >
+      <div className={`container mx-auto text-center p-4 ${isMobileMenuOpen ? "hidden" : ""}`}>
         <span className="text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-800 to-teal-500">
           Hi, I'm Toms
         </span>
@@ -145,7 +141,7 @@ function App() {
           Dive into a world of 3D creativity in my portfolio
         </p>
       </div>
-      <div className={`mt-8 ${isMobileMenuOpen ? "hidden" : ""}`}>
+      <div className={`mt-4 ${isMobileMenuOpen ? "hidden" : ""}`}>
         <Spline
           scene="https://prod.spline.design/OnXie33BXDe-Z7iO/scene.splinecode"
           width={splineWidth} // Set the width based on screen size

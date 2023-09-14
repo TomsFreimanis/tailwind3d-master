@@ -46,7 +46,7 @@ export const Skills = () => {
   ];
 
   return (
-    <section className="skill h-screen flex flex-col justify-center items-center bg-black">
+    <section className="skill h-auto md:h-screen flex flex-col justify-center items-center bg-black p-4 md:p-0">
       <div className="container">
         <h1 className="text-center text-4xl md:text-6xl font-extrabold text-teal-400 shadow-2xl leading-tight p-8 md:p-12">
           Skills
@@ -57,10 +57,10 @@ export const Skills = () => {
               key={index}
               className="small-box flex flex-col items-center bg-blend-darken rounded-md p-8 md:p-12 shadow-md"
             >
-              <div className="spline">
-                <Spline scene={skill.sceneUrl} />
+              <div className="spline-container mb-4 mt-4 md:mt-8"> {/* Adjust margin-top here */}
+                <Spline scene={skill.sceneUrl} width={200} height={200} /> {/* Adjust width and height as needed */}
               </div>
-              <h3 className="text-center mt-4 text-white text-lg md:text-xl font-extrabold">
+              <h3 className="text-center text-white text-lg md:text-xl font-extrabold">
                 {skill.title}
               </h3>
             </div>

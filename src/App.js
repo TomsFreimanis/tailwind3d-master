@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import Spline from "@splinetool/react-spline";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
 
   return (
     <div
+    id='about'
       className="w-screen h-screen flex flex-col justify-center items-center"
       style={{
         // Set the background image
@@ -54,7 +56,7 @@ function App() {
     >
       {/* Navbar */}
       <nav
-        className={`w-screen py-3 fixed top-0 z-10 ${
+        className={`w-screen py-0 fixed top-0 z-10 ${
           isScrolled ? "bg-teal-950" : ""
         }`}
       >
@@ -96,36 +98,48 @@ function App() {
             } md:flex space-x-6 text-white text-lg font-bold justify-center items-center m-0`}
           >
             <li>
-              <a
-                href="#about"
-                className="hover:text-teal-300 transition-colors duration-300"
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="hover:text-teal-300 transition-colors duration-300 cursor-pointer"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#skills"
-                className="hover:text-teal-300 transition-colors duration-300"
+              <Link
+                to="skills"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="hover:text-teal-300 transition-colors duration-300 cursor-pointer"
               >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#projects"
-                className="hover:text-teal-300 transition-colors duration-300"
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="hover:text-teal-300 transition-colors duration-300 cursor-pointer"
               >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#contact"
-                className="hover:text-teal-300 transition-colors duration-300"
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="hover:text-teal-300 transition-colors duration-300 cursor-pointer"
               >
                 Contacts
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

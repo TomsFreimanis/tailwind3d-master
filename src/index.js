@@ -5,6 +5,7 @@ import App from './App';
 import { Skills } from './components/Skills';
 import Projects from './components/Projects';
 import About from './components/About';
+import Contact from './components/Contact';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +15,7 @@ root.render(
     <About/>
 <Skills/>
 <Projects/>
+<Contact/>
   </React.StrictMode>
 );
 

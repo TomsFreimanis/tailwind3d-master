@@ -1,9 +1,11 @@
 import React from 'react';
 import Spline from "@splinetool/react-spline";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const About = () => {
 return (
-<section className="about h-full flex flex-col justify-center items-center bg-black">
+<section  className="about h-auto flex flex-col justify-center items-center bg-black">
+
 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
 
 <div className="grid grid-cols-1 md:grid-cols-2  gap-8">

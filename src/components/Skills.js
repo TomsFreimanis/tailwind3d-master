@@ -46,7 +46,7 @@ export const Skills = () => {
   ];
 
   return (
-    <section className="skill h-auto md:h-screen flex flex-col justify-center items-center bg-black p-4 md:p-0">
+    <section id="skills" className="skill h-auto md:h-screen flex flex-col justify-center items-center bg-black p-4 md:p-0">
       <div className="container">
         <h1 className="text-center text-4xl md:text-6xl font-extrabold text-teal-400 shadow-2xl leading-tight p-8 md:p-12">
           Skills

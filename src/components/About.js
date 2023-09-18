@@ -18,7 +18,7 @@ return (
 
       {/* Right side */}
       <div className="mt-8 mx-auto">
-      <Spline scene="https://prod.spline.design/ZWFsUXtmLoNEWsgt/scene.splinecode" />
+      <Spline scene="https://prod.spline.design/Lc1UJbpi75VTON-t/scene.splinecode" />
       </div>
     
       {/* Left side (lower) */}

@@ -6,6 +6,7 @@ import { Skills } from './components/Skills';
 import Projects from './components/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
+// import Kvesti from './components/Kvesti';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,6 +17,7 @@ root.render(
 <Skills/>
 <Projects/>
 <Contact/>
+{/* <Kvesti/> */}
   </React.StrictMode>
 );
 
